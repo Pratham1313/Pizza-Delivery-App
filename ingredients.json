@@ -1,0 +1,52 @@
+[
+    {
+        "CategoryName": "Bread",
+        "items": [
+            {"name": "Classic Thin Crust", "price": 50},
+            {"name": "Whole Wheat Crust", "price": 60},
+            {"name": "Garlic Parmesan Crust", "price": 70},
+            {"name": "Gluten-Free Crust", "price": 80},
+            {"name": "Stuffed Crust", "price": 90}
+        ]
+    },
+    {
+        "CategoryName": "Toppings",
+        "items": [
+            {"name": "Pepperoni", "price": 40},
+            {"name": "Mushrooms", "price": 30},
+            {"name": "Bell Peppers (Red, Green, Yellow)", "price": 20},
+            {"name": "Black Olives", "price": 25},
+            {"name": "Pineapple", "price": 35}
+        ]
+    },
+    {
+        "CategoryName": "Cheese",
+        "items": [
+            {"name": "Mozzarella", "price": 50},
+            {"name": "Cheddar", "price": 60},
+            {"name": "Feta", "price": 70},
+            {"name": "Gorgonzola", "price": 80},
+            {"name": "Vegan Cheese", "price": 90}
+        ]
+    },
+    {
+        "CategoryName": "Sauces",
+        "items": [
+            {"name": "Marinara", "price": 25},
+            {"name": "Alfredo", "price": 30},
+            {"name": "Pesto", "price": 35},
+            {"name": "BBQ Sauce", "price": 40},
+            {"name": "Olive Oil and Garlic", "price": 20}
+        ]
+    },
+    {
+        "CategoryName": "Meat Toppings",
+        "items": [
+            {"name": "Italian Sausage", "price": 45},
+            {"name": "Grilled Chicken", "price": 50},
+            {"name": "Bacon", "price": 55},
+            {"name": "Ham", "price": 60},
+            {"name": "Ground Beef", "price": 65}
+        ]
+    }
+]

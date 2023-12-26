@@ -17,7 +17,7 @@ const Mainimg = () => {
     </b> </h1>
     
   <div className="mt-3 ">
-    <button type="button" className="btn btn-warning btn-lg font-weight-bold font-monospace text-white" >EXPLORE NOW</button>
+    <button type="button" className="btn btn-warning btn-lg font-weight-bold  text-white display-1" ><b>EXPLORE NOW</b></button>
   </div>
 </div>
     </div>
@@ -27,7 +27,7 @@ const Mainimg = () => {
    </h3>
     <br />
     <div className="mt-3 d-flex flex-column align-items-center justify-content-center">
-    <button type="button" className="btn btn-warning btn-lg font-weight-bold font-monospace text-white" >CUSTOMIZE NOW</button>
+    <button type="button" className="btn btn-warning btn-lg font-weight-bold  text-white" ><b>CUSTOMIZE NOW</b></button>
     </div>
     <br /><br />
     <h3 className=' font-monospace text-center text-muted'>

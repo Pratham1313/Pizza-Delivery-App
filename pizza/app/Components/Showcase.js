@@ -5,9 +5,9 @@ const Showcase = () => {
    <br /><br />
     <div className='font-weight-bold  text-center '>
     <div className="btn-group " role="group" aria-label="Basic mixed styles example">
-    <button type="button" className="btn btn-primary">Show All</button>
-    <button type="button" className="btn btn-success">Veg Only</button>
-    <button type="button" className="btn btn-danger">Non-Veg Only</button>
+    <button type="button" className="btn btn-primary btn-lg"><b>Show All</b></button>
+    <button type="button" className="btn btn-success btn-lg"><b>Veg Only</b></button>
+    <button type="button" className="btn btn-danger btn-lg"><b>Non-Veg Only</b></button>
     </div>
     </div>
    <br /><br />
@@ -16,7 +16,7 @@ const Showcase = () => {
     {/* 1st */}
 
    <div className='d-flex justify-content-around mt-5'>      
-        <div className="card" style={{width: '18rem'}}>
+        <div className="card shadow hover " style={{width: '18rem'}}>
         <img src="/Images/Cheese_Margherita.jpg" className="card-img-top" alt="..."/>
         <div className="card-body">
             <h5 className="card-title text-center">Cheese Margherita</h5>
@@ -27,7 +27,7 @@ const Showcase = () => {
         </div>
         </div>
 
-        <div className="card" style={{width: '18rem'}}>
+        <div className="card shadow hover" style={{width: '18rem'}}>
         <img src="/Images/Corn_&_Cheese.jpg" className="card-img-top" alt="..."/>
         <div className="card-body">
             <h5 className="card-title text-center">Corn & Cheese</h5>
@@ -38,7 +38,7 @@ const Showcase = () => {
         </div>
         </div>
 
-        <div className="card" style={{width: '18rem'}}>
+        <div className="card shadow hover" style={{width: '18rem'}}>
         <img src="/Images/Farmhouse.jpg" className="card-img-top" alt="..."/>
         <div className="card-body">
             <h5 className="card-title text-center">Farmhouse</h5>
@@ -55,7 +55,7 @@ const Showcase = () => {
 
 
    <div className='d-flex justify-content-around mt-5'>
-        <div className="card" style={{width: '18rem'}}>
+        <div className="card shadow hover" style={{width: '18rem'}}>
         <img src="/Images/chicken_dominator.png" className="card-img-top" alt="..."/>
         <div className="card-body">
             <h5 className="card-title text-center">Chicken Dominator</h5>
@@ -66,7 +66,7 @@ const Showcase = () => {
         </div>
         </div>
 
-        <div className="card" style={{width: '18rem'}}>
+        <div className="card shadow hover" style={{width: '18rem'}}>
         <img src="/Images/chicken_golden_delight.png" className="card-img-top" alt="..."/>
         <div className="card-body">
             <h5 className="card-title text-center">Chicken Golden Delight</h5>
@@ -77,7 +77,7 @@ const Showcase = () => {
         </div>
         </div>
 
-        <div className="card" style={{width: '18rem'}}>
+        <div className="card shadow hover" style={{width: '18rem'}}>
         <img src="/Images/chicken_fiesta.png" className="card-img-top" alt="..."/>
         <div className="card-body">
             <h5 className="card-title text-center">Chicken Fiesta</h5>
@@ -92,7 +92,7 @@ const Showcase = () => {
     {/* 3rd */}
 
     <div className='d-flex justify-content-around mt-5'>
-        <div className="card" style={{width: '18rem'}}>
+        <div className="card shadow hover" style={{width: '18rem'}}>
         <img src="/Images/IndianTandooriPaneer.jpg" className="card-img-top" alt="..."/>
         <div className="card-body">
             <h5 className="card-title text-center">Indian Tandoori Paneer</h5>
@@ -103,7 +103,7 @@ const Showcase = () => {
         </div>
         </div>
 
-        <div className="card" style={{width: '18rem'}}>
+        <div className="card shadow hover" style={{width: '18rem'}}>
         <img src="/Images/Mexican_Green_Wave.jpg" className="card-img-top" alt="..."/>
         <div className="card-body">
             <h5 className="card-title text-center">Mexican Green Wave</h5>
@@ -114,7 +114,7 @@ const Showcase = () => {
         </div>
         </div>
 
-        <div className="card" style={{width: '18rem'}}>
+        <div className="card shadow hover" style={{width: '18rem'}}>
         <img src="/Images/Peppy_Paneer.jpg" className="card-img-top" alt="..."/>
         <div className="card-body">
             <h5 className="card-title text-center">Peppy Paneer</h5>
@@ -130,7 +130,7 @@ const Showcase = () => {
 
 
     <div className='d-flex justify-content-around mt-5'>
-        <div className="card" style={{width: '18rem'}}>
+        <div className="card shadow hover" style={{width: '18rem'}}>
         <img src="/Images/indi_chcicken_tikka.png" className="card-img-top" alt="..."/>
         <div className="card-body">
             <h5 className="card-title text-center">Indi Chicken Tikka</h5>
@@ -141,18 +141,18 @@ const Showcase = () => {
         </div>
         </div>
 
-        <div className="card" style={{width: '18rem'}}>
+        <div className="card shadow hover" style={{width: '18rem'}}>
         <img src="/Images/nonveg_supreme.png" className="card-img-top" alt="..."/>
         <div className="card-body">
             <h5 className="card-title text-center">Nonveg Supreme</h5>
-            <p className="card-text text-center">Bite into supreme delight of Black Olives, Onions, Grilled Mushrooms, Pepper BBQ Chicken, Peri-Peri Chicken, Grilled Chicken Rashers</p>
+            <p className="card-text text-center">Supreme delight of Black Olives, Onions, Grilled Mushrooms, Pepper BBQ Chicken, Peri-Peri Chicken, Grilled Chicken Rashers</p>
             <div className='d-flex flex-row  justify-content-around'><h6 className='mt-2'>&#8377;400</h6>
             <a href="#" className="btn btn-warning d-flex flex-row align-items-end justify-content-end">Order Now</a>
             </div>
         </div>
         </div>
 
-        <div className="card" style={{width: '18rem'}}>
+        <div className="card shadow hover" style={{width: '18rem'}}>
         <img src="/Images/pepper_bbq_chicken.png" className="card-img-top" alt="..."/>
         <div className="card-body">
             <h5 className="card-title text-center">Pepper BBQ Chicken</h5>
