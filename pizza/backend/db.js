@@ -4,7 +4,7 @@ const mongourl = 'mongodb+srv://anishakumarilal:RajNangare@cluster0.zl8om0k.mong
 
 const connectToDB = async () => {
   try {
-    await mongoose.connect(mongourl, { useNewUrlParser: true, useUnifiedTopology: true });
+    await mongoose.connect(mongourl);
     console.log('Connected to MongoDB');
 
     // Fetch all documents from the "pizzas" collection

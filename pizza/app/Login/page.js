@@ -2,14 +2,17 @@
 import React from 'react';
 import Link from 'next/link';
 import  { useState } from 'react';
+import { useRouter } from 'next/navigation'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Page = () => {
-
+  const router = useRouter()
   const [cred,setCred]=useState({email:" ",password:""});
 
   const handleSubmit =async(e)=>{
     e.preventDefault();
-    const response = await fetch("http://localhost:5000/api/createuser",{
+    const response = await fetch("http://localhost:5000/api/loginuser",{
       method:'POST',
       headers:{
         'Content-Type':'application/json'
@@ -21,7 +24,12 @@ const Page = () => {
     console.log(json)
 
     if(!json.success){
-      alert("Enter Valid credentials")
+      toast("Enter Valid credentials")
+    }
+    else{
+      router.push('/')      
+      localStorage.setItem("authToken",json.authToken)
+      // console.log(localStorage.getItem("authToken"))
     }
   }
 
@@ -31,6 +39,7 @@ const Page = () => {
   return (
    <>
     <div>
+    <ToastContainer />
       <div className="container d-flex justify-content-center align-items-center vh-100">
         <div className="signup-container bg-light p-4 rounded text-center shadow hover">
           <h1 className="signup-title">Login</h1>

@@ -2,6 +2,9 @@ const express = require('express')
 const router = express.Router()
 const User = require('../models/User')
 const { body, validationResult } = require('express-validator');
+const jwt= require("jsonwebtoken")
+
+const jwtSecret="mynameisanishaandiamagoodgirl9123"
 
 router.post("/createuser",
 [  body('email').isEmail(),
@@ -43,8 +46,13 @@ async (req,res)=>{
         if(!req.body.password===userData.password){
             return res.status(400).json({ errors:"Invalid Email id or Password" });
         }
-
-        return res.json({ success:true });
+        const data={
+            user:{
+                id:userData.id
+            }
+        }
+        const authToken=jwt.sign(data,jwtSecret)
+        return res.json({ success:true,authToken:authToken });
     } catch (error) {
         console.log(error)
     res.json({success:false})
