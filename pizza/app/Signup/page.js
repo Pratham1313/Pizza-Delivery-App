@@ -31,7 +31,7 @@ const Page = () => {
 
   return (
     <div>
-      <div className="container d-flex justify-content-center align-items-center vh-100">
+      <div className="container d-flex justify-content-center align-items-center vh-50">
         <div className="signup-container bg-light p-4 rounded text-center shadow hover">
           <h1 className="signup-title">Sign Up</h1>
           <img src="/Images/pizzaeat.webp" className="img-fluid mt-3" alt="..." />
@@ -48,11 +48,11 @@ const Page = () => {
             </div>
              <div className="form-floating mb-3">
               <input type="text" className="form-control" id="location" placeholder="Address" name='location' value={cred.location} onChange={onchange}/>
-              <label htmlFor="location">Address</label>
+              <label htmlFor="floatingInput">Address</label>
             </div>
             <div className="form-floating mb-3">
               <input type="password" className="form-control" id="password" placeholder="Password" name='password' value={cred.password} onChange={onchange}/>
-              <label htmlFor="password">Password</label>
+              <label htmlFor="floatingInput">Password</label>
             </div>
            
             <button type="submit" className="btn btn-success btn-lg mt-4">Create Account</button>

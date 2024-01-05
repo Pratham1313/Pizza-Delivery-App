@@ -28,6 +28,7 @@ const Page = () => {
     }
     else{
       router.push('/')      
+      toast("Login Success")
       localStorage.setItem("authToken",json.authToken)
       // console.log(localStorage.getItem("authToken"))
     }

@@ -9,7 +9,8 @@ const connectToDB = async () => {
 
     // Fetch all documents from the "pizzas" collection
     const fetchedData = await mongoose.connection.db.collection('pizzas').find({}).toArray();
-
+    global.pizzas=fetchedData;
+    // console.log(pizzas);
     // console.log('Fetched Data:', fetchedData);
   } catch (error) {
     console.error('Error connecting to MongoDB:', error.message);
