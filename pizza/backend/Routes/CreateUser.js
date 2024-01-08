@@ -43,7 +43,7 @@ async (req,res)=>{
         if(!userData){
             return res.status(400).json({ errors:"Invalid Email id or Password" });
         }
-        if(!req.body.password===userData.password){
+        if(req.body.password!==userData.password){
             return res.status(400).json({ errors:"Invalid Email id or Password" });
         }
         const data={

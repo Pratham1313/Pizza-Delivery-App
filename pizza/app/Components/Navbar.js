@@ -1,12 +1,22 @@
 "use client"
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Link from 'next/link'
+import "bootstrap/dist/css/bootstrap.css";
+
 
 const Navbar = () => {
+  useEffect(() => {
+    import("bootstrap/dist/js/bootstrap");
+  }, []);
+  
+  
   const handleLogout=()=>{
-    localStorage.removeItem("authToken");
+    if (typeof localStorage !== 'undefined') {
+      localStorage.removeItem('authToken');
+    }
     window.location.reload();
   }
+
   return (
     <>
       
@@ -23,7 +33,10 @@ const Navbar = () => {
                   <Link className="nav-link active mx-3" aria-current="page" href="/About">About</Link>
                 </li>
                   {(localStorage.getItem("authToken"))? 
-                <li className="nav-link active mx-3">cart
+                <li className="nav-link active mx-3 ">
+                <span  class=" position-relative">My Cart{" "}
+                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">99</span>
+                </span>
                 </li>: " "}
                 <li className="nav-item dropdown mx-3">
                   <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
