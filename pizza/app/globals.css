@@ -1,0 +1,43 @@
+/* Overlay Styles */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+  }
+  
+  /* Modal Styles */
+  .modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(34, 34, 34);
+    z-index: 1000;
+    height: 90%;
+    width: 90%;
+    padding: 20px; /* Add padding as needed */
+    box-sizing: border-box;
+    overflow: auto; /* Enable scrolling if content exceeds modal height */
+  }
+  
+  /* Close Button Styles */
+  .close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #dc3545; /* Red color for close button */
+    color: #fff;
+    border: none;
+    padding: 10px;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  
+  .close-button:hover {
+    background-color: #c82333; /* Darker red color on hover */
+  }
+  

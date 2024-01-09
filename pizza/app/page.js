@@ -6,7 +6,9 @@ import Navbar from "./Components/Navbar";
 import Mainimg from "./Components/Mainimg";
 import Showcase from "./Components/Showcase";
 import Footer from "./Components/Footer";
-import { CartProvider } from "./Components/ContextReducer";
+import { CartProvider } from "./components/ContextReducer";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const page = () => {
   useEffect(() => {
@@ -29,6 +31,7 @@ const page = () => {
   }, []);
   return (
     <>
+         <ToastContainer />
     <CartProvider>
       <Navbar />
       <Mainimg />

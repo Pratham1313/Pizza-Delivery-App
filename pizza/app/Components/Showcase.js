@@ -1,8 +1,11 @@
 import React, { useEffect, useRef, useState } from "react";
-import { useDispatchCart ,useCart } from "./ContextReducer";
-
+import { useCart, useDispatchCart } from '../components/ContextReducer';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { useRouter } from 'next/navigation'
 
 const Showcase = (props) => {
+  const router= useRouter()
 let dispatch= useDispatchCart();
   let options = props.options;
   let priceOptions = Object.keys(options)
@@ -13,15 +16,45 @@ let dispatch= useDispatchCart();
   const [qty,setQty]=useState(1)
   const [size,setSize]=useState("")
 
-  const handleAddtoCart=async()=>{
-    await dispatch({type:"ADD",id:props.foodItem._id,Name:props.foodItem.name,price:finalPrice,qty:qty,size:size,img:props.foodItem.img})
-    console.log(data)
-  }
-
   let finalPrice=qty* parseInt(options[size])
   useEffect(()=>{
     setSize(priceRef.current.value)
   })
+
+
+  const handleAddToCart = async () => {
+    if (!localStorage.getItem("authToken")) {
+      router.push("/Login")
+    }
+    else{
+      toast("Added to cart")
+    let food = []
+    for (const item of data) {
+      if (item.id === props.foodItem._id) {
+        food = item;
+
+        break;
+      }
+    }
+    if (food != []) {
+      if (food.size === size) {
+        await dispatch({ type: "UPDATE", id: props.foodItem._id, price: finalPrice, qty: qty })
+        return
+      }
+      else if (food.size !== size) {
+        await dispatch({ type: "ADD", id: props.foodItem._id, Name: props.foodItem.name, price: finalPrice, qty: qty, size: size,img: props.ImgSrc })
+        return
+      }
+      return
+    }
+    }
+
+    await dispatch({ type: "ADD", id: props.foodItem._id, Name: props.foodItem.name, price: finalPrice, qty: qty, size: size })
+
+
+
+  
+}
   return (
     <>
       <div className="card mt-5 " style={{"width": "18rem","marginRight":"10px","marginLeft":"175px"}}>
@@ -46,9 +79,9 @@ let dispatch= useDispatchCart();
 
             <div className="d-inline m-2 fs-6">₹{finalPrice}</div>
           </div>
-          <a href="#" className="btn btn-primary mt-3 d-flex flex-column justify-items-center" onClick={handleAddtoCart}>
+          <span href="#" className="btn btn-primary mt-3 d-flex flex-column justify-items-center" onClick={handleAddToCart}>
             Add to cart
-          </a>
+          </span>
         </div>
       </div>
     </>

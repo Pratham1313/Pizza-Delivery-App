@@ -1,7 +1,10 @@
-"use client"
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link'
 import "bootstrap/dist/css/bootstrap.css";
+import Modal from '../Modal';
+import Cart from './Cart';
+import { useCart, useDispatchCart } from '../components/ContextReducer';
+
 
 
 const Navbar = () => {
@@ -9,10 +12,15 @@ const Navbar = () => {
     import("bootstrap/dist/js/bootstrap");
   }, []);
   
+  let data = useCart();
+
+
+  const[cartView,setCartView]=useState(false)
   
+  let lclstorage=localStorage;
   const handleLogout=()=>{
-    if (typeof localStorage !== 'undefined') {
-      localStorage.removeItem('authToken');
+    if (typeof lclstorage !== 'undefined') {
+      lclstorage.removeItem('authToken');
     }
     window.location.reload();
   }
@@ -32,11 +40,12 @@ const Navbar = () => {
                 <li className="nav-item">
                   <Link className="nav-link active mx-3" aria-current="page" href="/About">About</Link>
                 </li>
-                  {(localStorage.getItem("authToken"))? 
-                <li className="nav-link active mx-3 ">
-                <span  class=" position-relative">My Cart{" "}
-                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">99</span>
+                  {lclstorage.getItem("authToken")? 
+                <li className="nav-link active mx-3 "  style={{"cursor":"pointer"}}>
+                <span  className=" position-relative" onClick={()=>{setCartView(true)}}>My Cart{" "}
+                <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">{data.length>0? data.length:""}</span>
                 </span>
+                {cartView?<Modal onClose={()=>{setCartView(false)}}><Cart/></Modal>:null}
                 </li>: " "}
                 <li className="nav-item dropdown mx-3">
                   <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
