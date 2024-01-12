@@ -42,14 +42,14 @@ let dispatch= useDispatchCart();
         return
       }
       else if (food.size !== size) {
-        await dispatch({ type: "ADD", id: props.foodItem._id, Name: props.foodItem.name, price: finalPrice, qty: qty, size: size,img: props.ImgSrc })
+        await dispatch({ type: "ADD", id: props.foodItem._id, Name: props.foodItem.name, price: finalPrice, qty: qty, size: size,img: props.foodItem.img })
         return
       }
       return
     }
     }
 
-    await dispatch({ type: "ADD", id: props.foodItem._id, Name: props.foodItem.name, price: finalPrice, qty: qty, size: size })
+    await dispatch({ type: "ADD", id: props.foodItem._id, Name: props.foodItem.name, price: finalPrice, qty: qty, size: size,img: props.img })
 
 
 
@@ -57,11 +57,13 @@ let dispatch= useDispatchCart();
 }
   return (
     <>
-      <div className="card mt-5 " style={{"width": "18rem","marginRight":"10px","marginLeft":"175px"}}>
+    <div  class="row    m-5"> 
+    <div>
+      <div className="card mt-2 " style={{"width": "18rem","marginLeft":"100px"}}>
         <img src={props.foodItem.img} className="card-img-top" alt="image thi" />
         <div className="card-body">
-          <h5 className="card-title">{props.foodItem.name}</h5>
-          <p className="card-text">{props.foodItem.description}
+          <h5 className="card-title text-center">{props.foodItem.name}</h5>
+          <p className="card-text text-center">{props.foodItem.description}
           </p>
           <div className="container ">
             <select className="h-100 w-20 p-2 rounded" onChange={(e)=>setQty(e.target.value)}>
@@ -83,6 +85,8 @@ let dispatch= useDispatchCart();
             Add to cart
           </span>
         </div>
+      </div>
+      </div>
       </div>
     </>
   );

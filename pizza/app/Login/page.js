@@ -30,6 +30,7 @@ const Page = () => {
       router.push('/')      
       toast("Login Success")
       localStorage.setItem("authToken",json.authToken)
+      localStorage.setItem("userEmail",cred.email)
       // console.log(localStorage.getItem("authToken"))
     }
   }

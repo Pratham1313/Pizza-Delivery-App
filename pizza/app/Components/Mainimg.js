@@ -9,10 +9,7 @@ const Mainimg = () => {
         Sorry, your browser doesn't support videos.
       </video>
       <div className="position-absolute top-0 start-0 w-100 h-100 d-flex flex-column align-items-center justify-content-center">
-  {/* <h1 className='text-light font-weight-bold font-monospace text-center display-1' style={{fontWeight: 'bold'}}><b>
-  SAVOR A  <br className="d-lg-none" /> SYMPHONY <br className="d-lg-none" />  OF FLAVOR
-    </b> </h1> */}
-     <h1 className='text-light font-weight-bold font-monospace text-center display-1' style={{fontWeight: 'bold'}}><b>
+     <h1 className='text-light font-weight-bold font-monospace text-center display-2' style={{fontWeight: 'bold'}}><b>
      UNLEASH A SYMPHONY  OF <br /> FLAVORS IN EVERY <br /> IRRESISTIBLE BITE
     </b> </h1>
     
