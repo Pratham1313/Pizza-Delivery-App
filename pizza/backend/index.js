@@ -2,7 +2,10 @@ const express = require('express')
 const app = express()
 const port = 5000
 const mongoDB=require("./db")
+require('dotenv').config();
 mongoDB()
+
+
 
 app.use(function(req, res, next) {  //middleware
   res.setHeader("Access-Control-Allow-Origin", "*");

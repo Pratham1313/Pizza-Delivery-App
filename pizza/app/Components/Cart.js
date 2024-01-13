@@ -58,7 +58,7 @@ export default function Cart() {
               <td>{food.size}</td>
               <td>{food.price}</td>
               <td>
-                <div className="btn p-0" onClick={() => { dispatch({ type: "REMOVE", index: index })}}>Delete</div>
+                <div className="btn p-0 text-danger" onClick={() => { dispatch({ type: "REMOVE", index: index })}}>Delete</div>
               </td>
             </tr>
           ))}
@@ -67,7 +67,7 @@ export default function Cart() {
         </table>
         <div><h1 className='fs-2 text-light'>Total Price: {totalPrice}/-</h1></div>
         <div>
-          <button className='btn bg-success mt-5 ' onClick={handleCashon} > Cash on delivery </button>
+          <button className='btn bg-success btn-lg mt-5 text-white' onClick={handleCashon} > Cash on delivery </button>
         </div>
       </div>
 
